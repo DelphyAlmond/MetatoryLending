@@ -18,6 +18,8 @@ app.post('/save-form-data', (req, res) => {
     }
   });
   console.log("Inna");
+  console.log("shaman_stepan_ded");
+  console.log("Anita");
 });
 
 app.listen(port, () => {
