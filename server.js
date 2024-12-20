@@ -17,6 +17,7 @@ app.post('/save-form-data', (req, res) => {
       res.send('Data saved successfully');
     }
   });
+  console.log("Inna");
 });
 
 app.listen(port, () => {
