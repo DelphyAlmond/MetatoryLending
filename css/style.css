@@ -1,0 +1,355 @@
+
+@font-face {
+  font-family: 'MFont'; /* Choose a name for your font */
+  src: url('../fonts/LetterheadPricelist.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'ContentFont'; /* Choose a name for your font */
+  src: /* url('../fonts/stolzl_medium.otf') format('opentype'),
+       url('../fonts/stolzl_medium.ttf') format('truetype'),
+       url('../fonts/stolzl_medium.woff') format('woff'), */
+       url('../fonts/stolzl_regular.otf') format('opentype'),
+       url('../fonts/stolzl_regular.ttf') format('truetype'),
+       url('../fonts/stolzl_regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'InfoFont'; /* Choose a name for your font */
+  src: url('../fonts/Tablon-Medium.ttf') format('truetype'),
+       url('../fonts/Tablon-Regular.ttf') format('truetype');
+  font-weight: medium;
+}
+
+.header-font {
+  font-family: 'MFont';
+}
+
+.content-font {
+  font-family: 'ContentFont';
+}
+
+.info-font {
+  font-family: 'InfoFont';
+}
+
+.light-c {
+  color: #add8e6;
+}
+
+.middle-c {
+  color: #f17489;
+}
+
+.dark-c {
+  color: #23116B;
+}
+
+.header-container {
+  position: relative;
+  min-height: 500px;
+  background-image: url('../images/HeaderBackgr.png');
+  background-size: contain; /* Or cover, adjust as needed */
+  background-position: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 156px 0 0 0;
+  z-index: 1;
+}
+
+.header-container h1 {
+  line-height: 110px;
+}
+
+.nav-item a {
+  transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+  color: #f17489; /* Color on hover */
+}
+
+.large-heading {
+  font-size: 7em;
+  /* text-transform: uppercase;  ------------------- better or not [!] */
+}
+
+.XR-description {
+  position: relative;
+  min-height: 560px;
+  background-image: url('../images/DescriptionBackgr.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  z-index: 1;
+}
+
+.XR-description h1 {
+  padding: 18px 0 0 0;
+  line-height: 24px;
+  z-index: 2;
+}
+
+.XR-description p {
+  font-size: 0.9em;
+  z-index: 2;
+}
+
+.team-description {
+  min-height: 1270px;
+  padding: 80px 0 0 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.team-description h1{
+  top: 50px;
+  font-size: 3em;
+  z-index: 1;
+}
+
+.quotes p {
+  font-size: 0.8em;
+}
+
+.quotes h6 {
+  line-height: 14px;
+}
+
+.masked-image {
+  width: 200px;
+  height: 140px;
+  padding-bottom: 12px;
+  margin-left: 12px;
+  display: inline-flex; /* -flex -block ---------- how each choice affect [!] */
+  overflow: hidden;
+  z-index: 2;
+}
+
+.masked-image img {
+  mask-image: url('../images/svgs/SubtractImgRight.svg');
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  max-width: auto;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.team-member-info {
+  position: relative;
+  text-align: center;
+}
+
+.team-member-text {
+  font-size: 0.7em;
+  position: absolute;
+  /* top: 24px; ------------------------ individually set [!]
+  right: 128px; */
+  align-items: center;
+  align-content: center;
+  vertical-align: middle;
+}
+
+.team-member-text h6 {
+  line-height: 18px;
+  z-index: 1;
+}
+
+.team-member-text p {
+  line-height: 16px;
+  z-index: 1;
+}
+
+.team-member-circle {
+  content: "";
+  position: absolute;
+  width: 128px;
+  height: 128px;
+  background-color: #f17489;
+  border-radius: 50%;
+  /* Makes it a circle by rounding corners of the border */
+  z-index: 0;
+}
+
+.team-description::before {
+  content: "";
+  position: absolute;
+  top: 20px; /* Adjust this value to control how much of the circle extends above */
+  left: 50%;
+  transform: translateX(-50%); /* Centers the circle horizontally */
+  width: 1600px; /* Adjust the width of the circle */
+  height: 1200px; /* Adjust the height of the circle; should be equal to width for a circle */
+  background-color: #add8e6; /* Or any color you like */
+  border-radius: 50%; /* Makes it a circle */
+  z-index: -1;
+}
+
+.event-line {
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line-container {
+  overflow-x: scroll;
+  display: flex; /* Enables horizontal arrangement of cards
+  automatically shorten card's width after adding new
+  [ x ] => card's size set */
+  width: 980px;
+  height: 300px;
+  gap: 12px; /* Adds spacing between cards */
+}
+
+.line-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* are these 'buttons' actually nececcary for scrolling -------- [ ? ]
+
+#afterBtn {
+  vertical-align: middle;
+  cursor: pointer; [ ! ]
+  content: "";
+  position: absolute;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  background-color: #add8e6;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+#beforeBtn {
+  align-items: center;
+  cursor: pointer; [ ! ]
+  content: "";
+  position: absolute;
+  left: 40px;
+  width: 50px;
+  height: 50px;
+  background-color: #add8e6;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+*/
+
+/* --------------------------------------------------- [ animation ] */
+
+.card {
+  cursor: pointer; /* Indicate it's clickable */
+  width: 360px;
+  height: 260px;
+  background-color: #f17489;
+  box-shadow: 0 8px 0 #add8e6;
+  /* Add transition for - : */
+  transition: box-shadow 0.3 ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  top: 10px;
+  box-shadow: 0 0 0 #add8e6; /* Upward shift */
+}
+
+.card:active {
+  background-color: #add8e6;
+}
+
+.card-image {
+  width: 100%;
+  height: 66.66%; /* 2/3 height of the card */
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px 0 0 10px;
+  text-align: start;
+}
+
+.card-content h3 {
+  line-height: 16px;
+  font-size: 1em;
+}
+
+.card-content p {
+  line-height: 14px;
+  font-size: 0.9em;
+}
+
+.contacts-info {
+  min-height: 240px;
+  background-color: #f17489;
+  padding-top: 20px;
+  padding-left: 60px;
+}
+
+.contacts-info a:hover{
+  color: #add8e6;
+}
+
+#modal-form .fDialog {
+  padding-top: 100px;
+  min-height: 740px;
+  min-width: 620px;
+}
+
+#modal-form .fHeader {
+  min-height: 100px;
+  font-size: 2em;
+  background-color: #add8e6;
+  padding: 0 0 0 20px;
+}
+
+#modal-form .fBody {
+  padding-left: 20px;
+  background-color: #add8e6;
+  position: relative;
+}
+
+#modal-form .fLabel {
+  font-size: 0.9em;
+}
+
+#modal-form .btn-primary {
+  background-color: #23116B;
+  color: #add8e6;
+  border: none;
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s ease;
+  border-radius: 6px;
+}
+
+#modal-form .btn-primary:hover {
+  background-color: #f17489;
+  color: #23116B;
+}
+
+#modal-form .btn-cl {
+  background-color: #add8e6;
+  color: #23116B;
+  border: none; /* Remove default button border */
+  display: inline;
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: color 0.3s ease;
+}
+
+#modal-form .btn-cl:hover {
+  color: #f17489;
+}
+
+#modal-form .form-control {
+  display: inline;
+  padding-right: 20px;
+}
