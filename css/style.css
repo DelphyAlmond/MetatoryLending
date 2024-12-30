@@ -467,8 +467,8 @@
   padding: 20px;
 }
 
-/*Фото с событий
-.gallery {
+/*Фото с событий*/
+/*.gallery {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -495,30 +495,52 @@
 .gallery{
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: 40px 70px 70px 70px;
+  grid-template-rows: 40px 60px 60px 60px;
   grid-gap: 10px;
   padding: 10px;
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 80px; 
-  /*padding-bottom: 80px;*/
+  padding-bottom: 80px;
 }
 
 .parallelogram {
   width: 310px;
   height: 400px;
   object-fit: contain;
-  clip-path: polygon( 0 0%, 100% 20%, 100% 100%, 0 80%);
-  /*display: block;/* убирает нижний отступ у картинки*/
-  border-radius: 20px; /* Закругляем углы */
-  border: 2px solid #add8e6; /* Добавляем рамку */
+  /*clip-path: path('M20 0   C10 0 0 10 0 20   L0 330   C0 340 10 350 20 350   L280 400   C290 400 300 390 300 380   L300 80   C300 70 290 62 280 60 Z');*/
+  clip-path: path('M30 0 C15 0 0 15 0 30 L0 320 C0 335 15 350 30 350 L280 400 C295 400 310 385 310 370 L310 80 C310 65 295 50 280 50 Z');
 }
+
+/*.parallelogram-container {        бред
+  display: inline-block;
+  width: 310px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 30px;
+  border: 6px solid #f17489;
+  box-sizing: border-box;
+}*/
 
 .galleryItem0{ grid-area: 1 / 1 / 2 / 3; }
 .galleryItem1{ grid-area: 2 / 1 / 4 / 3; }
 .galleryItem2 { grid-area: 3 / 3 / 5 / 5; }
 .galleryItem3 { grid-area: 4 / 5 / 6 / 7; }
-/*.parallelogram:nth-child(3) { grid-area: 3 / 3 / 5 / 5; }
-.parallelogram:nth-child(4) { grid-area: 4 / 4 / 6 / 6; }
-.parallelogram:nth-child(5) { grid-area: 5 / 5 / 7 / 7; }
+
+/*
+.line-container {
+  width: 315px;
+  height: 405px; /* высота контейнера 
+  position: relative;
+}
+.horizontal-line {
+  width: 100%; 
+  height: 100%;
+  background-color: #add8e6;
+  clip-path: path('M30 0 C15 0 0 15 0 30 L0 320 C0 335 15 350 30 350 L280 400 C295 400 310 385 310 370 L310 80 C310 65 295 50 280 50 Z')
+}
+
+.galleryLine1{ grid-area: 2 / 1 / 4 / 3; }
+.galleryLine2 { grid-area: 3 / 3 / 5 / 5; }
+.galleryLine3 { grid-area: 4 / 5 / 6 / 7; }*/
