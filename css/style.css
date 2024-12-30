@@ -354,18 +354,18 @@
   padding-right: 20px;
 }
 
+/* раздел с проектами*/
 .image-project-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /*grid-template-rows: 80px 80px 150px 250px 100px 100px 100px;*/
-  grid-template-rows: repeat (8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
   grid-gap: 10px;
   padding: 10px;
   max-width: 1000px; 
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 150px; 
+  margin-bottom: 80px; 
 }
 
 .image-project-item img {
@@ -418,3 +418,87 @@
 .item4 { grid-area: 5 / 3 / 8 / 4; }
 .item4text { grid-area: 6 / 1 / 8 / 3; }
 .item5text { grid-area: 8 / 1 / 9 / 4; }
+
+/*Планы*/
+.Plans{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 50px 120px 160px 200px;
+  grid-gap: 10px;
+  padding: 10px;
+  max-width: 1000px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px; 
+}
+
+.PlansItem0 { grid-area: 1 / 1 / 2 / 2; }
+.PlansItem1_1 { 
+  grid-area: 2 / 1 / 3 / 2;  
+  border: 5px solid #add8e6; 
+  border-radius: 20px;
+  padding: 20px;
+}
+.PlansItem1_2 { grid-area: 2 / 2 / 3 / 3; }
+.PlansItem2_1 { grid-area: 3 / 3 / 4 / 4; }
+.PlansItem2_2 { 
+  grid-area: 3 / 2 / 4 / 3;  
+  border: 5px solid #add8e6;
+  border-radius: 20px;
+  padding: 20px;
+}
+.PlansItem3_1 { 
+  grid-area: 4 / 3 / 5 / 4;  
+  border: 5px solid #add8e6;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+/*Фото с событий
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: rotate(-45deg);
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+.gallery-image-container {
+  margin: 10px;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+}
+
+.gallery-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: rotate(45deg) scale(1.4);
+}*/
+
+.gallery{
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 80px;
+  grid-gap: 10px;
+  padding: 10px;
+  max-width: 10r00px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px; 
+}
+
+.parallelogram {
+  width: 300px;
+  height: 450px;
+  clip-path: polygon( 0 0%, 100% 20%, 100% 100%, 0 80%);
+ 
+}
+
+.galleryItem1{ grid-area: 1 / 1 / 3 / 3; }
+.galleryItem2 { grid-area: 2 / 3 / 4 / 5; }
+.galleryItem3 { grid-area: 3 / 6 / 5 / 7; }
