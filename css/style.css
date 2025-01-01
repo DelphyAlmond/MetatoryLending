@@ -362,7 +362,6 @@
   grid-gap: 10px;
   padding: 10px;
   max-width: 1000px; 
-  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
   /*margin-bottom: 80px; */
@@ -408,16 +407,25 @@
   transition: color 0.3s ease;
 }
 
-.item0 { grid-area: 1 / 1 / 2 / 4; }
+.item0 { 
+  grid-area: 1 / 1 / 2 / 4;
+  align-self: end;
+ }
 .item1 { grid-area: 2 / 1 / 4 / 2; }
 .item1text { grid-area: 2 / 2 / 3 / 3; }
 .item2 { grid-area: 2 / 3 / 4 / 4; }
 .item2text { grid-area: 4 / 3 / 5 / 4; }
 .item3 { grid-area: 4 / 1 / 6 / 2; }
-.item3text { grid-area: 5 / 2 / 6 / 3; }
+.item3text { 
+  grid-area: 5 / 2 / 6 / 3;
+  align-self: end;
+ }
 .item4 { grid-area: 5 / 3 / 7 / 4; }
-.item4text { grid-area: 6 / 1 / 8 / 3; }
-/*.item5text { grid-area: 8 / 1 / 9 / 4; }*/
+.item4text { 
+  grid-area: 6 / 1 / 7 / 3;  
+  align-self: end;
+}
+.item5text { grid-area: 7 / 1 / 8 / 4; }
 
 /*Планы*/
 .Plans{
@@ -430,7 +438,6 @@
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 80px; 
 }
 
 /*.PlansArrow {
@@ -501,8 +508,33 @@
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 80px; 
-  padding-bottom: 80px;
+  margin-bottom: 100px; 
+  padding-top: 150px;
+  padding-bottom: 150px;
+  position: relative;
+  z-index: 0;
+}
+
+.gallery-strip {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: -50vw;
+  bottom: 0;
+  background: linear-gradient(
+    12deg,
+    transparent 0%,
+    transparent 27%,
+    #add8e6 27%,
+    #add8e6 73%,
+    transparent 73%,
+    transparent 100%
+  );
+  transform: translateX(-50%); 
+  width: 100vw;
+
+  z-index: -1;
 }
 
 .parallelogram {
@@ -511,36 +543,10 @@
   object-fit: contain;
   /*clip-path: path('M20 0   C10 0 0 10 0 20   L0 330   C0 340 10 350 20 350   L280 400   C290 400 300 390 300 380   L300 80   C300 70 290 62 280 60 Z');*/
   clip-path: path('M30 0 C15 0 0 15 0 30 L0 320 C0 335 15 350 30 350 L280 400 C295 400 310 385 310 370 L310 80 C310 65 295 50 280 50 Z');
+  z-index: 1;
 }
-
-/*.parallelogram-container {        бред
-  display: inline-block;
-  width: 310px;
-  height: 400px;
-  overflow: hidden;
-  border-radius: 30px;
-  border: 6px solid #f17489;
-  box-sizing: border-box;
-}*/
 
 .galleryItem0{ grid-area: 1 / 1 / 2 / 3; }
 .galleryItem1{ grid-area: 2 / 1 / 4 / 3; }
 .galleryItem2 { grid-area: 3 / 3 / 5 / 5; }
 .galleryItem3 { grid-area: 4 / 5 / 6 / 7; }
-
-/*
-.line-container {
-  width: 315px;
-  height: 405px; /* высота контейнера 
-  position: relative;
-}
-.horizontal-line {
-  width: 100%; 
-  height: 100%;
-  background-color: #add8e6;
-  clip-path: path('M30 0 C15 0 0 15 0 30 L0 320 C0 335 15 350 30 350 L280 400 C295 400 310 385 310 370 L310 80 C310 65 295 50 280 50 Z')
-}
-
-.galleryLine1{ grid-area: 2 / 1 / 4 / 3; }
-.galleryLine2 { grid-area: 3 / 3 / 5 / 5; }
-.galleryLine3 { grid-area: 4 / 5 / 6 / 7; }*/
